@@ -1,1 +1,0 @@
-# sgtkuncoro.github.io
