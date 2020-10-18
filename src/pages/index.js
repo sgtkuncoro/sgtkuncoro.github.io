@@ -13,7 +13,6 @@ const HomePage = () => (
       PHP, HTML, CSS, React, react-redux, JQuery, GraphQL, Unit-testing and also
       have experience working with relational and spatial databases
     </p>
-    <p>Now go build something great.</p>
   </Layout>
 )
 
