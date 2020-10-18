@@ -1,8 +1,11 @@
+const { siteMetadata } = require("./config")
+
 module.exports = {
   siteMetadata: {
-    title: `Sigit Kuncoro`,
-    description: `I am Sigit, working as a Front End developer, passionate to write code with Javascript and have professional experience working with Node.js, PHP, HTML, CSS, React, react-redux, JQuery, GraphQL, Unit-testing and also have experience working with relational and spatial databases.`,
-    author: `@sgtkuncoro`,
+    title: siteMetadata.title,
+    subtitle: siteMetadata.subtitle
+    description: siteMetadata.description,
+    author: siteMetadata.author.userName,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,7 +13,21 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `static`,
+        path: `${__dirname}/static`,
       },
     },
     `gatsby-transformer-sharp`,
