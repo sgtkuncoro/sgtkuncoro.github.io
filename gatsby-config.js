@@ -3,7 +3,7 @@ const { siteMetadata } = require("./config")
 module.exports = {
   siteMetadata: {
     title: siteMetadata.title,
-    subtitle: siteMetadata.subtitle
+    subtitle: siteMetadata.subtitle,
     description: siteMetadata.description,
     author: siteMetadata.author.userName,
   },
