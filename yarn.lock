@@ -5475,6 +5475,11 @@ gatsby-page-utils@^0.0.35:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
+gatsby-plugin-dynamic-routes@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-dynamic-routes/-/gatsby-plugin-dynamic-routes-1.0.0.tgz#94c5593078f17dfdd76eb681804a26a7e1c24951"
+  integrity sha512-n0VoUjlOh+S2xFsrjS+qnKNl1Ej64PoLNXDEXXw4YLJ3ln1N+1goSEzG8tECgJrCGO91Ezc1UkEydB7QakGG+Q==
+
 gatsby-plugin-manifest@^2.2.31:
   version "2.2.31"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.31.tgz#ed68f9366416e5833de76673a3f6785c96875f82"
