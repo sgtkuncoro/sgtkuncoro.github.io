@@ -6,6 +6,7 @@ module.exports = {
     subtitle: siteMetadata.subtitle,
     description: siteMetadata.description,
     author: siteMetadata.author.userName,
+    menus: siteMetadata.menus,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

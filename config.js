@@ -12,14 +12,18 @@ module.exports = {
     googleAnalyticsId: "",
     useKatex: false,
     copyright: "© All rights reserved.",
-    menu: [
+    menus: [
       {
         label: "About",
-        path: "/pages/about",
+        path: "/about",
       },
       {
         label: "Contact",
-        path: "/pages/contacts",
+        path: "/contact",
+      },
+      {
+        label: "Portfolio",
+        path: "/portfolio",
       },
     ],
 
