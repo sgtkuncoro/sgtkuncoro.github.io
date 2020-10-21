@@ -5,10 +5,10 @@ import { get } from "lodash"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
-const GetDetailPage = graphql`
-  query GetDetailPage {
+const GetAboutQuery = graphql`
+  query GetAboutQuery {
     allMarkdownRemark(
-      filter: { id: { eq: "d57e5e9a-5510-5e64-b736-463d03fbba84" } }
+      filter: { id: { eq: "c487c9ef-5db8-5eea-a892-977ceeb68b52" } }
     ) {
       nodes {
         id
@@ -16,7 +16,6 @@ const GetDetailPage = graphql`
           title
           slug
           description
-          list
         }
         html
       }
@@ -24,8 +23,8 @@ const GetDetailPage = graphql`
   }
 `
 
-const HomePage = ({ id }) => {
-  const data = useStaticQuery(GetDetailPage)
+const AboutPage = ({ id }) => {
+  const data = useStaticQuery(GetAboutQuery)
 
   const title = get(data, "allMarkdownRemark.nodes[0].frontmatter.title", "")
   const description = get(
@@ -33,7 +32,6 @@ const HomePage = ({ id }) => {
     "allMarkdownRemark.nodes[0].frontmatter.description",
     ""
   )
-  // const skills = get(data, "allMarkdownRemark.nodes[0].frontmatter.list", "")
   const content = get(data, "allMarkdownRemark.nodes[0].html", "")
 
   return (
@@ -44,4 +42,4 @@ const HomePage = ({ id }) => {
   )
 }
 
-export default HomePage
+export default AboutPage

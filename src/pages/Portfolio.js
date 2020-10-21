@@ -5,18 +5,17 @@ import { get } from "lodash"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
-const GetDetailPage = graphql`
-  query GetDetailPage {
+const GetPortfolioQuery = graphql`
+  query GetPortfolioQuery {
     allMarkdownRemark(
-      filter: { id: { eq: "d57e5e9a-5510-5e64-b736-463d03fbba84" } }
+      filter: { id: { eq: "dfb2e8b9-7d7c-57a8-a244-889fbfeffedc" } }
     ) {
       nodes {
         id
         frontmatter {
           title
+          summary
           slug
-          description
-          list
         }
         html
       }
@@ -24,24 +23,24 @@ const GetDetailPage = graphql`
   }
 `
 
-const HomePage = ({ id }) => {
-  const data = useStaticQuery(GetDetailPage)
-
+const PortfolioPage = () => {
+  const data = useStaticQuery(GetPortfolioQuery)
   const title = get(data, "allMarkdownRemark.nodes[0].frontmatter.title", "")
-  const description = get(
+  const summary = get(
     data,
-    "allMarkdownRemark.nodes[0].frontmatter.description",
+    "allMarkdownRemark.nodes[0].frontmatter.summary",
     ""
   )
-  // const skills = get(data, "allMarkdownRemark.nodes[0].frontmatter.list", "")
   const content = get(data, "allMarkdownRemark.nodes[0].html", "")
 
   return (
     <Layout>
-      <SEO title={title} description={description} />
+      <SEO title={title} description={summary} />
+      <h2>{title}</h2>
+      <p>{summary}</p>
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </Layout>
   )
 }
 
-export default HomePage
+export default PortfolioPage
