@@ -2,7 +2,9 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
+import NavMenu from "./Menu/NavMenu"
+
+const Header = ({ siteTitle, menus }) => (
   <header
     style={{
       marginBottom: `1.45rem`,
@@ -26,6 +28,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <NavMenu menus={menus} />
     </div>
   </header>
 )

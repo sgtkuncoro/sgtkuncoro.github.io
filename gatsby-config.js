@@ -3,9 +3,10 @@ const { siteMetadata } = require("./config")
 module.exports = {
   siteMetadata: {
     title: siteMetadata.title,
-    subtitle: siteMetadata.subtitle
+    subtitle: siteMetadata.subtitle,
     description: siteMetadata.description,
     author: siteMetadata.author.userName,
+    menus: siteMetadata.menus,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -47,5 +48,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    `gatsby-plugin-dynamic-routes`,
   ],
 }
