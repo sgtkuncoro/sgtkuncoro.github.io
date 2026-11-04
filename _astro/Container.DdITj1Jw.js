@@ -1,0 +1,1 @@
+import{j as e}from"./jsx-runtime.TBa3i5EZ.js";import"./index.CVf8TyFT.js";const m={prose:"max-w-prose",wide:"max-w-wide"},i=({width:s="prose",as:o="div",className:t="",children:r})=>{const a=`mx-auto ${m[s]} px-6 sm:px-8 lg:px-12 ${t}`.trim();return e.jsx(o,{className:a,children:r})};export{i as C};

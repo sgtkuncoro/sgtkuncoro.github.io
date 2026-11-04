@@ -1,0 +1,6 @@
+import{c as m}from"./createLucideIcon._i08WZ69.js";import{r as v}from"./index.CVf8TyFT.js";/**
+ * @license lucide-react v0.400.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const w=m("ArrowUpRight",[["path",{d:"M7 7h10v10",key:"1tivn9"}],["path",{d:"M7 17 17 7",key:"1vkiza"}]]),y='a[href],button:not([disabled]),input:not([disabled]),textarea:not([disabled]),select:not([disabled]),[tabindex]:not([tabindex="-1"])';function E(r,s,c){v.useEffect(()=>{if(!r)return;const e=s.current;if(!e)return;const l=document.activeElement,i=()=>Array.from(e.querySelectorAll(y)).filter(t=>t.offsetParent!==null||t===document.activeElement);(i()[0]??e).focus();const u=t=>{if(t.key==="Escape"){c?.();return}if(t.key!=="Tab")return;const o=i();if(o.length===0){t.preventDefault(),e.focus();return}const a=o[0],f=o[o.length-1],n=document.activeElement;t.shiftKey&&(n===a||n===e)?(t.preventDefault(),f.focus()):!t.shiftKey&&n===f&&(t.preventDefault(),a.focus())};document.addEventListener("keydown",u);const d=document.body.style.overflow;return document.body.style.overflow="hidden",()=>{document.removeEventListener("keydown",u),document.body.style.overflow=d,l?.focus?.()}},[r,s,c])}export{w as A,E as u};
